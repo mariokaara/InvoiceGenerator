@@ -37,7 +37,8 @@ def filler10(f):
 def invoiceAmount(arve, f):
     summaSõne = str(arve[27])
     summaFloat = float(summaSõne.replace(",", "."))
-    sendidPanka = summaFloat*100
+    sendidPanka = summaFloat*10000
+    sendidPanka = sendidPanka/100
     sendidPankaStr = str(int(sendidPanka))
     f.write('{:0>11}'.format(sendidPankaStr))
     return sendidPanka
